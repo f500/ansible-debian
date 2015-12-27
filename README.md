@@ -6,12 +6,13 @@ Some base-tasks (for debian)
 Requirements
 ------------
 
-Debian Wheezy with the package python-pycurl and python-software-properties installed.
+Debian Wheezy/Jessie with the package python-pycurl and python-software-properties installed.
 
 Role Variables
 --------------
 
     debian_cache_valid_time: 14400
+    debian_codename: "wheezy" (default) or "jessie"
 
 Example Playbook
 -------------------------

@@ -10,10 +10,10 @@
   apt: pkg=python-pycurl state=present
 
 - name: add backports repository
-  apt_repository: repo='deb http://ftp.nl.debian.org/debian wheezy-backports main' state=present update_cache=no
+  apt_repository: repo='deb http://ftp.nl.debian.org/debian {{ debian_codename }}-backports main' state=present update_cache=no
 
 - name: add backports source repository
-  apt_repository: repo='deb-src http://ftp.nl.debian.org/debian wheezy-backports main' state=present update_cache=yes
+  apt_repository: repo='deb-src http://ftp.nl.debian.org/debian {{ debian_codename }}-backports main' state=present update_cache=yes
 
 - name: install python-configparser
   apt: pkg=python-configparser state=present
