@@ -1,3 +1,4 @@
 ---
 
 debian_cache_valid_time: 14400
+debian_codename: wheezy
