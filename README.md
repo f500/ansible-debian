@@ -12,7 +12,7 @@ Role Variables
 --------------
 
     debian_cache_valid_time: 14400
-    debian_codename: "wheezy" (default) or "jessie"
+    debian_codename: "wheezy" (default) or "jessie" or '{{ ansible_distribution_release }}'
 
 Example Playbook
 -------------------------
