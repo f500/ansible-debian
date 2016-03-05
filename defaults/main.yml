@@ -1,4 +1,5 @@
 ---
 
 debian_cache_valid_time: 14400
-debian_codename: wheezy
+debian_repo_url: 'ftp.us.debian.org'
+debian_codename: '{{ ansible_distribution_release }}'
