@@ -20,8 +20,8 @@ Role Variables
 --------------
 
     debian_cache_valid_time: 14400
-    debian_codename: "wheezy" (default) or "jessie" or '{{ ansible_distribution_release }}'
-    debian_repo_url: 'ftp.us.debian.org'
+    debian_codename: "wheezy", "jessie", "stretch" or "{{ ansible_distribution_release }}"
+    debian_repo_url: "ftp.us.debian.org"
 
 Be aware that `debian_codename` defaults on `{{ ansible_distribution_release }}` so, most of the chances, you don't need to specify it.
 
