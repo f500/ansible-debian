@@ -14,14 +14,15 @@ It also runs apt-get update when it was run, last time, more than `{{ debian_cac
 Requirements
 ------------
 
-Debian Wheezy or Jessie.
+Debian Wheezy/Jessie/Stretch.
 
 Role Variables
 --------------
 
+    debian_cache_update: yes
     debian_cache_valid_time: 14400
-    debian_codename: "wheezy" (default) or "jessie" or '{{ ansible_distribution_release }}'
-    debian_repo_url: 'ftp.us.debian.org'
+    debian_codename: '{{ ansible_distribution_release }}' ('wheezy', 'jessie', 'stretch')
+    debian_codename: '{{ ansible_distribution_release }}'
 
 Be aware that `debian_codename` defaults on `{{ ansible_distribution_release }}` so, most of the chances, you don't need to specify it.
 
@@ -41,7 +42,7 @@ Example Playbook
 License
 -------
 
-LGPL
+LGPL-3.0
 
 Author Information
 ------------------
