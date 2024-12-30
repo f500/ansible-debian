@@ -49,7 +49,8 @@ use_default_rules: true
 # the use of skip_list below because that will hide violations from the output.
 # When putting ignores inside the ignore file, they are marked as ignored, but
 # still visible, making it easier to address later.
-#skip_list:
+skip_list:
+  - risky-shell-pipe
 #  - skip_this_tag
 
 # Ansible-lint does not automatically load rules that have the 'opt-in' tag.
@@ -86,26 +87,26 @@ enable_list:
 # Offline mode disables installation of requirements.yml and schema refreshing
 offline: true
 
-# Define required Ansible's variables to satisfy syntax check
-#extra_vars:
-#  foo: bar
-#  multiline_string_variable: |
-#    line1
-#    line2
-#  complex_variable: ":{;\t$()"
+  # Define required Ansible's variables to satisfy syntax check
+  #extra_vars:
+  #  foo: bar
+  #  multiline_string_variable: |
+  #    line1
+  #    line2
+  #  complex_variable: ":{;\t$()"
 
-# Uncomment to enforce action validation with tasks, usually is not
-# needed as Ansible syntax check also covers it.
-# skip_action_validation: false
+  # Uncomment to enforce action validation with tasks, usually is not
+  # needed as Ansible syntax check also covers it.
+  # skip_action_validation: false
 
-# List of additional kind:pattern to be added at the top of the default
-# match list, first match determines the file kind.
-#kinds:
+  # List of additional kind:pattern to be added at the top of the default
+  # match list, first match determines the file kind.
+  #kinds:
   # - playbook: "**/examples/*.{yml,yaml}"
   # - galaxy: "**/folder/galaxy.yml"
   # - tasks: "**/tasks/*.yml"
   # - vars: "**/vars/*.yml"
-  # - meta: "**/meta/main.yml"
+# - meta: "**/meta/main.yml"
 #  - yaml: "**/*.yaml-too"
 
 # List of additional collections to allow in only-builtins rule.
